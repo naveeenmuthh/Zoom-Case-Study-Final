@@ -85,8 +85,12 @@
   .dial .dial-num{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;margin-top:10px;}
   .dial .dial-label{font-size:12px;color:var(--muted);max-width:140px;margin:2px auto 0;}
 
-  .funnel-row{display:flex;flex-direction:column;gap:10px;}
-  .funnel-bar{height:40px;border-radius:10px;display:flex;align-items:center;padding:0 18px;color:#fff;font-size:13px;font-weight:500;justify-content:space-between;}
+  .funnel-row{display:flex;flex-direction:column;gap:20px;}
+  .funnel-item{width:100%;}
+  .funnel-label{display:flex;justify-content:space-between;align-items:baseline;gap:10px 16px;flex-wrap:wrap;margin-bottom:7px;}
+  .funnel-label .name{font-size:13.5px;color:var(--text);font-weight:500;}
+  .funnel-label .val{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);white-space:nowrap;}
+  .funnel-bar{height:16px;border-radius:8px;min-width:28px;max-width:100%;}
 
   .link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:22px 0;}
   .link-chip{
@@ -387,6 +391,8 @@
     .bar-row .bar-track{flex:1 1 auto;}
     .swatch .chip{height:52px;}
     .story-node{flex:1 0 78vw;}
+    .funnel-label{gap:4px 12px;}
+    .funnel-label .name{font-size:12.5px;}
     .cluster-head{margin:38px 0 16px;font-size:19px;}
     .dial-wrap{gap:22px;}
   }
@@ -796,9 +802,18 @@
 
     <div class="infographic">
       <div class="funnel-row">
-        <div class="funnel-bar" style="background:#7C9CF5;width:100%;">Total addressable market <span>~$70.83B by 2030</span></div>
-        <div class="funnel-bar" style="background:#8FD3C7;width:74%;">Combined Zoom-addressable SAM <span>~$26–28B</span></div>
-        <div class="funnel-bar" style="background:#F5B7D2;width:34%;color:#3a2a33;">K–12 conferencing + AI (US) <span>~$1.5B</span></div>
+        <div class="funnel-item">
+          <div class="funnel-label"><span class="name">Total addressable market</span><span class="val">~$70.83B by 2030</span></div>
+          <div class="funnel-bar" style="background:#7C9CF5;width:100%;"></div>
+        </div>
+        <div class="funnel-item">
+          <div class="funnel-label"><span class="name">Combined Zoom-addressable SAM</span><span class="val">~$26–28B</span></div>
+          <div class="funnel-bar" style="background:#8FD3C7;width:74%;"></div>
+        </div>
+        <div class="funnel-item">
+          <div class="funnel-label"><span class="name">K–12 conferencing + AI (US)</span><span class="val">~$1.5B</span></div>
+          <div class="funnel-bar" style="background:#F5B7D2;width:34%;"></div>
+        </div>
       </div>
       <div class="cap">From global TAM down to the slice Zoom can realistically win first</div>
     </div>
